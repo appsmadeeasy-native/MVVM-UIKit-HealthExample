@@ -207,36 +207,40 @@ extension PressureView: UITextFieldDelegate {
             if (diastolicTextField.hasText &&
                 heartRateTextField.hasText &&
                 updateText.count > 0) {
-                self.saveButton.backgroundColor = UIColor(hexString: "#5641FF")
-                self.saveButton.isEnabled = true
+                saveButtonColorAndState(isColorAndState: true)
             } else {
-                self.saveButton.backgroundColor = UIColor(hexString: "D3D3D3")
-                self.saveButton.isEnabled = false
+                saveButtonColorAndState(isColorAndState: false)
             }
         case 1:
             if (systolicTextField.hasText &&
                 heartRateTextField.hasText &&
                 updateText.count > 0) {
-                self.saveButton.backgroundColor = UIColor(hexString: "#5641FF")
-                self.saveButton.isEnabled = true
+                saveButtonColorAndState(isColorAndState: true)
             } else {
-                self.saveButton.backgroundColor = UIColor(hexString: "D3D3D3")
-                self.saveButton.isEnabled = false
+                saveButtonColorAndState(isColorAndState: false)
             }
         case 2:
             if (systolicTextField.hasText &&
                 diastolicTextField.hasText &&
                 updateText.count > 0) {
-                self.saveButton.backgroundColor = UIColor(hexString: "#5641FF")
-                self.saveButton.isEnabled = true
+                saveButtonColorAndState(isColorAndState: true)
             } else {
-                self.saveButton.backgroundColor = UIColor(hexString: "D3D3D3")
-                self.saveButton.isEnabled = false
+                saveButtonColorAndState(isColorAndState: false)
             }
         default:
             print(textField.text!)
         }
 
         return updateText.count < 4
+    }
+    
+    func saveButtonColorAndState(isColorAndState: Bool) {
+        if isColorAndState {
+            self.saveButton.backgroundColor = UIColor(hexString: "#5641FF")
+            self.saveButton.isEnabled = true
+        } else {
+            self.saveButton.backgroundColor = UIColor(hexString: "D3D3D3")
+            self.saveButton.isEnabled = false
+        }
     }
 }
