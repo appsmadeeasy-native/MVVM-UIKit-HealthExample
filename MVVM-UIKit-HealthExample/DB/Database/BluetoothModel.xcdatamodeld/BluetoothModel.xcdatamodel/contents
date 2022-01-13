@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="19G73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DeviceMO" representedClassName="DeviceMO" syncable="YES" codeGenerationType="class">
+        <attribute name="characteristicUUID" optional="YES" attributeType="String"/>
+        <attribute name="characteristicUUID2" optional="YES" attributeType="String"/>
+        <attribute name="characteristicUUID3" optional="YES" attributeType="String"/>
+        <attribute name="characteristicUUID4" optional="YES" attributeType="String"/>
+        <attribute name="deviceType" optional="YES" attributeType="String"/>
+        <attribute name="lastReadingTimestamp" optional="YES" attributeType="String"/>
+        <attribute name="lastReadingValue1" optional="YES" attributeType="String"/>
+        <attribute name="lastReadingValue2" optional="YES" attributeType="String"/>
+        <attribute name="lastReadingValue3" optional="YES" attributeType="String"/>
+        <attribute name="readingScale" optional="YES" attributeType="String"/>
+        <attribute name="serviceUUID" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="VitalReadingMO" representedClassName="VitalReadingMO" syncable="YES" codeGenerationType="class">
+        <attribute name="createdTimestamp" optional="YES" attributeType="String"/>
+        <attribute name="isBluetooth" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="readingValue1" optional="YES" attributeType="String"/>
+        <attribute name="readingValue2" optional="YES" attributeType="String"/>
+        <attribute name="readingValue3" optional="YES" attributeType="String"/>
+        <attribute name="vitalType" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="DeviceMO" positionX="-63" positionY="-18" width="128" height="208"/>
+        <element name="VitalReadingMO" positionX="-63" positionY="54" width="128" height="133"/>
+    </elements>
+</model>

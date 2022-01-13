@@ -1,0 +1,43 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Gifu",
+        "repositoryURL": "https://github.com/kaishin/Gifu.git",
+        "state": {
+          "branch": null,
+          "revision": "0ffe24744cc3d82ab9edece53670d0352c6d5507",
+          "version": "3.3.0"
+        }
+      },
+      {
+        "package": "Realm",
+        "repositoryURL": "https://github.com/realm/realm-cocoa.git",
+        "state": {
+          "branch": null,
+          "revision": "ae8e646590396dfc13c1abbf8aa2e48c43766dce",
+          "version": "10.7.2"
+        }
+      },
+      {
+        "package": "RealmDatabase",
+        "repositoryURL": "https://github.com/realm/realm-core",
+        "state": {
+          "branch": null,
+          "revision": "bab46acdca91c417a0d4849b8f4992a3c17e29a5",
+          "version": "10.5.5"
+        }
+      },
+      {
+        "package": "TinyConstraints",
+        "repositoryURL": "https://github.com/roberthein/TinyConstraints.git",
+        "state": {
+          "branch": null,
+          "revision": "f413ea53b886de81b925eeb37a14538fe6ae4912",
+          "version": "4.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

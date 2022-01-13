@@ -1,0 +1,1 @@
+This project display bluetooth readings from vital medical devices and save locally. It also allows user to manually enter vital readings and save locally for later display. Local databases used are Core Data  DB and Realm DB.
