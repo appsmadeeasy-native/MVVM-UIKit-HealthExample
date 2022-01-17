@@ -61,7 +61,6 @@
 		958C83BD2630DEC800DC9855 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958C83BC2630DEC800DC9855 /* LaunchScreen.storyboard */; };
 		958C83E02631DC5600DC9855 /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958C83DF2631DC5600DC9855 /* LaunchViewController.swift */; };
 		958C83EB263260CA00DC9855 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958C83EA263260C900DC9855 /* SettingsViewController.swift */; };
-		959103FA27861BDC00AE0285 /* RepositoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 959103F927861BDC00AE0285 /* RepositoryManager.swift */; };
 		95A67B832718D269001AC5FE /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 95A67B822718D269001AC5FE /* Realm */; };
 		95A67B852718D269001AC5FE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 95A67B842718D269001AC5FE /* RealmSwift */; };
 		95F11CAE263C7D250042C0ED /* CoreDataContextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F11CAD263C7D250042C0ED /* CoreDataContextProvider.swift */; };
@@ -125,7 +124,6 @@
 		958C83BC2630DEC800DC9855 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		958C83DF2631DC5600DC9855 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		958C83EA263260C900DC9855 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
-		959103F927861BDC00AE0285 /* RepositoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryManager.swift; sourceTree = "<group>"; };
 		95F11CAD263C7D250042C0ED /* CoreDataContextProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataContextProvider.swift; sourceTree = "<group>"; };
 		95F11CB0263C8FB10042C0ED /* DomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModel.swift; sourceTree = "<group>"; };
 		95F11CBC263C91470042C0ED /* DeviceCDRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCDRepository.swift; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 		953AA3A62604621300B1C2E6 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				959103F927861BDC00AE0285 /* RepositoryManager.swift */,
 				953AA3B32604645400B1C2E6 /* RealmRepository.swift */,
 				9568EAF82638CEE800BC4D59 /* CoreDataRepository.swift */,
 				95F11CBC263C91470042C0ED /* DeviceCDRepository.swift */,
@@ -563,7 +560,6 @@
 				953AA45F260A8C3F00B1C2E6 /* ColorConstants.swift in Sources */,
 				953B4817261623AC00C18495 /* CentralManagerSvc.swift in Sources */,
 				953AA482260D336400B1C2E6 /* ReadingsDetailViewController.swift in Sources */,
-				959103FA27861BDC00AE0285 /* RepositoryManager.swift in Sources */,
 				953B47FA2613AF0000C18495 /* Date+Helpers.swift in Sources */,
 				952D76672777AB610014AEC1 /* ManualEntryViewController.swift in Sources */,
 				95670D2F2601338200BDCAC3 /* SceneDelegate.swift in Sources */,

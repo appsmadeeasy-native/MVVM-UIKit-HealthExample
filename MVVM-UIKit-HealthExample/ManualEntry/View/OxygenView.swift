@@ -36,7 +36,7 @@ class OxygenView: ProgrammaticView {
     private var bmpValues = [String]()
     private var bmpSelectedValue = ""
     
-    var closeManualEntryDelegate: CloseManualEntryDelegate!
+    weak var closeManualEntryDelegate: CloseManualEntryDelegate!
 
     override func configure() {
         backgroundColor = UIColor(hexString: grayWhiteColor)

@@ -7,7 +7,7 @@
 
 import UIKit
 
-protocol CloseManualEntryDelegate {
+protocol CloseManualEntryDelegate: AnyObject {
     func didTapSaveButton()
 }
 

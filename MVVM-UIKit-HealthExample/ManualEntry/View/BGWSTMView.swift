@@ -24,7 +24,7 @@ class BGWSTMView: UIView {
     private var maximumValue: String?
     private var formatString = "%.0f"
     
-    var closeManualEntryDelegate: CloseManualEntryDelegate!
+    weak var closeManualEntryDelegate: CloseManualEntryDelegate!
    
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -32,7 +32,7 @@ class PressureView: ProgrammaticView {
     private let deviceType: String = "Blood Pressure"
     private let grayWhiteColor = "#FAFAFA"
     
-    var closeManualEntryDelegate: CloseManualEntryDelegate!
+    weak var closeManualEntryDelegate: CloseManualEntryDelegate!
   
     override func configure() {
         let defaults = UserDefaults.standard
