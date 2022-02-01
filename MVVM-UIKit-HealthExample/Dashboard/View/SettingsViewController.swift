@@ -39,18 +39,14 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func coreDataBtnAction(_ sender: UIButton) {
-        if sender.isSelected {
-            realmDBButton.isSelected = false
-        } else {
+        if !sender.isSelected {
             sender.isSelected = true
             realmDBButton.isSelected = false
         }
     }
     
     @IBAction func realmDBBtnAction(_ sender: UIButton) {
-        if sender.isSelected {
-            coreDataButton.isSelected = false
-        } else {
+        if !sender.isSelected {
             sender.isSelected = true
             coreDataButton.isSelected = false
         }
