@@ -8,23 +8,17 @@
 import Foundation
 import CoreData
 
-/// Protocol that describes a reading repository.
 protocol VitalReadingRepositoryInterface {
-    // Insert a reading
+
     func insertReading(vitalReading: VitalReading) -> Result<VitalReading, Error>
-    // Get all readings using a predicate
     func getReadings(predicate: NSPredicate?, numberOfRows: Int) -> Result<[VitalReading], Error>
 }
 
-// VitalReading Repository class.
 class VitalReadingCDRepository {
-    // The Core Data VitalReading repository.
+
     private let repositoryVR: CoreDataRepository<VitalReadingMO>
-    /// The NSManagedObjectContext instance to be used for performing the operations.
     private let managedObjectContext: NSManagedObjectContext
 
-    /// Designated initializer
-    /// - Parameter context: The context used for storing and quering Core Data.
     init(context: NSManagedObjectContext) {
         self.repositoryVR = CoreDataRepository<VitalReadingMO>(managedObjectContext: context)
         self.managedObjectContext = context
@@ -70,7 +64,6 @@ extension VitalReadingCDRepository: VitalReadingRepositoryInterface {
             return .success(vitalReadingMO.toDomainModel())
             
         case .failure(let error):
-            // Return the Core Data error.
             return .failure(error)
         }
     }
