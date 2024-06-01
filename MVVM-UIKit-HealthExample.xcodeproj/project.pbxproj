@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -63,6 +63,7 @@
 		958C83EB263260CA00DC9855 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 958C83EA263260C900DC9855 /* SettingsViewController.swift */; };
 		95A67B832718D269001AC5FE /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 95A67B822718D269001AC5FE /* Realm */; };
 		95A67B852718D269001AC5FE /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 95A67B842718D269001AC5FE /* RealmSwift */; };
+		95EA49D72C08E9A200629744 /* NewBGWSTMView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EA49D62C08E9A200629744 /* NewBGWSTMView.swift */; };
 		95F11CAE263C7D250042C0ED /* CoreDataContextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F11CAD263C7D250042C0ED /* CoreDataContextProvider.swift */; };
 		95F11CB1263C8FB10042C0ED /* DomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F11CB0263C8FB10042C0ED /* DomainModel.swift */; };
 		95F11CBD263C91470042C0ED /* DeviceCDRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F11CBC263C91470042C0ED /* DeviceCDRepository.swift */; };
@@ -124,6 +125,7 @@
 		958C83BC2630DEC800DC9855 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		958C83DF2631DC5600DC9855 /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		958C83EA263260C900DC9855 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		95EA49D62C08E9A200629744 /* NewBGWSTMView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewBGWSTMView.swift; sourceTree = "<group>"; };
 		95F11CAD263C7D250042C0ED /* CoreDataContextProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataContextProvider.swift; sourceTree = "<group>"; };
 		95F11CB0263C8FB10042C0ED /* DomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainModel.swift; sourceTree = "<group>"; };
 		95F11CBC263C91470042C0ED /* DeviceCDRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCDRepository.swift; sourceTree = "<group>"; };
@@ -280,6 +282,7 @@
 		953B4832261B883300C18495 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				95EA49D62C08E9A200629744 /* NewBGWSTMView.swift */,
 				952D766A2777C90F0014AEC1 /* BGWSTMView.swift */,
 				952D76722777C9970014AEC1 /* OxygenView.swift */,
 				952D766C2777C9300014AEC1 /* PressureView.swift */,
@@ -430,7 +433,6 @@
 				95670D252601338200BDCAC3 /* Sources */,
 				95670D262601338200BDCAC3 /* Frameworks */,
 				95670D272601338200BDCAC3 /* Resources */,
-				FC26B75E3D767EC200D4D9DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -528,23 +530,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		FC26B75E3D767EC200D4D9DA /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MVVM-UIKit-HealthExample/Pods-MVVM-UIKit-HealthExample-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-MVVM-UIKit-HealthExample/Pods-MVVM-UIKit-HealthExample-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MVVM-UIKit-HealthExample/Pods-MVVM-UIKit-HealthExample-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -583,6 +568,7 @@
 				953AA465260ACF4500B1C2E6 /* FadeAnimationController.swift in Sources */,
 				9584C03C278227D500E5415E /* UITextField+Helpers.swift in Sources */,
 				952D766B2777C90F0014AEC1 /* BGWSTMView.swift in Sources */,
+				95EA49D72C08E9A200629744 /* NewBGWSTMView.swift in Sources */,
 				953B482F2618F1C600C18495 /* Observable.swift in Sources */,
 				953AA3BA260545EA00B1C2E6 /* Device.swift in Sources */,
 				953AA3B42604645400B1C2E6 /* RealmRepository.swift in Sources */,
@@ -725,9 +711,9 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = B3YJ68CQV6;
+				DEVELOPMENT_TEAM = H7KH5K633A;
 				INFOPLIST_FILE = "MVVM-UIKit-HealthExample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -751,7 +737,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "MVVM-UIKit-HealthExample/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

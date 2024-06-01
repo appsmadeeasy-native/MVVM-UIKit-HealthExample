@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class DashboardViewController: UIViewController {
     
@@ -46,35 +47,44 @@ class DashboardViewController: UIViewController {
         let device = mDeviceList[sender.tag]
         switch device.deviceType {
         case "Glucometer":
-            let vc = UIStoryboard(name: "ManualEntry", bundle: nil).instantiateViewController(withIdentifier: "ManualEntryViewController") as? ManualEntryViewController
-            vc?.contentType = "Glucometer"
-            let navController = CustomNavigationController(rootViewController: vc!)
+            let childVC = UIHostingController(rootView: NewBGWSTMView(navigationController: self.navigationController!, maximumValue: 600, readingType: .glucode))
+
+            let navController = CustomNavigationController(rootViewController: childVC)
             navController.modalPresentationStyle = .overFullScreen
             self.present(navController, animated: false, completion: nil)
+
         case "Blood Pressure":
+
             let vc = UIStoryboard(name: "ManualEntry", bundle: nil).instantiateViewController(withIdentifier: "ManualEntryViewController") as? ManualEntryViewController
             vc?.contentType = "Blood Pressure"
             let navController = CustomNavigationController(rootViewController: vc!)
             navController.modalPresentationStyle = .overFullScreen
             self.present(navController, animated: false, completion: nil)
+
         case "Weight Scale":
-            let vc = UIStoryboard(name: "ManualEntry", bundle: nil).instantiateViewController(withIdentifier: "ManualEntryViewController") as? ManualEntryViewController
-            vc?.contentType = "Weight Scale"
-            let navController = CustomNavigationController(rootViewController: vc!)
+
+            let childVC = UIHostingController(rootView: NewBGWSTMView(navigationController: self.navigationController!, maximumValue: 350, readingType: .weightScale))
+
+            let navController = CustomNavigationController(rootViewController: childVC)
             navController.modalPresentationStyle = .overFullScreen
             self.present(navController, animated: false, completion: nil)
+
         case "Thermometer":
-            let vc = UIStoryboard(name: "ManualEntry", bundle: nil).instantiateViewController(withIdentifier: "ManualEntryViewController") as? ManualEntryViewController
-            vc?.contentType = "Thermometer"
-            let navController = CustomNavigationController(rootViewController: vc!)
+
+            let childVC = UIHostingController(rootView: NewBGWSTMView(navigationController: self.navigationController!, maximumValue: 109.2, readingType: .thermometer))
+
+            let navController = CustomNavigationController(rootViewController: childVC)
             navController.modalPresentationStyle = .overFullScreen
             self.present(navController, animated: false, completion: nil)
+
         case "Pulse Oximeter":
+
             let vc = UIStoryboard(name: "ManualEntry", bundle: nil).instantiateViewController(withIdentifier: "ManualEntryViewController") as? ManualEntryViewController
             vc?.contentType = "Pulse Oximeter"
             let navController = CustomNavigationController(rootViewController: vc!)
             navController.modalPresentationStyle = .overFullScreen
             self.present(navController, animated: false, completion: nil)
+            
         default:
             return
         }

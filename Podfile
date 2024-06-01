@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
- platform :ios, '14.0'
+ platform :ios, '16.0'
 
 target 'MVVM-UIKit-HealthExample' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -7,6 +7,6 @@ target 'MVVM-UIKit-HealthExample' do
 
   # Pods for MVVM-UIKit-HealthExample
 
-pod 'fluid-slider'
+#pod 'fluid-slider'
 
 end

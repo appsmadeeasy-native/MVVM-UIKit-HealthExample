@@ -6,12 +6,12 @@
 //
 
 import UIKit
-import fluid_slider
+//import fluid_slider
 
 class BGWSTMView: UIView {
     
     @IBOutlet weak var glucoseLabel: UILabel!
-    @IBOutlet weak var slider: Slider!
+//    @IBOutlet weak var slider: Slider!
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var vitalTypeLabel: UILabel!
     
@@ -57,14 +57,14 @@ class BGWSTMView: UIView {
             maximumValue = "600"
             initialValue = "92"
             vitalTypeLabel.text = "mg/dl"
-            slider.contentViewColor = UIColor(hexString: "#4E4DE0")
+//            slider.contentViewColor = UIColor(hexString: "#4E4DE0")
             saveButton.backgroundColor = UIColor(hexString: "#4E4DE0")
         case "Weight Scale":
             minimumValue = "3"
             maximumValue = "350"
             initialValue = "110"
             vitalTypeLabel.text = "lbs"
-            slider.contentViewColor = UIColor(hexString: "#C8503C")
+//            slider.contentViewColor = UIColor(hexString: "#C8503C")
             saveButton.backgroundColor = UIColor(hexString: "#C8503C")
         case "Thermometer":
             minimumValue = "93.2"
@@ -72,7 +72,7 @@ class BGWSTMView: UIView {
             initialValue = "97.0"
             vitalTypeLabel.text = "°F"
             formatString = "%.1f"
-            slider.contentViewColor = UIColor(hexString: "#6D2A6C")
+//            slider.contentViewColor = UIColor(hexString: "#6D2A6C")
             saveButton.backgroundColor = UIColor(hexString: "#6D2A6C")
         default:
             print(deviceType)
@@ -81,50 +81,50 @@ class BGWSTMView: UIView {
         glucoseLabel.text = initialValue
         
         saveButton.layer.cornerRadius = 10
-        slider.layer.cornerRadius = 10
+//        slider.layer.cornerRadius = 10
         
         // Configure Slider object here
         let labelTextAttributes: [NSAttributedString.Key : Any] = [.font: UIFont.systemFont(ofSize: 18, weight: .bold), .foregroundColor: UIColor.white]
-        slider.attributedTextForFraction = { fraction in
-            let formatter = NumberFormatter()
-            formatter.maximumIntegerDigits = 3
-            formatter.maximumFractionDigits = 1
-            return NSAttributedString(string: self.initialValue!, attributes: [.font: UIFont.systemFont(ofSize: 18, weight: .bold), .foregroundColor: UIColor.black])
-        }
-        slider.setMinimumLabelAttributedText(NSAttributedString(string: minimumValue!, attributes: labelTextAttributes))
-        slider.setMaximumLabelAttributedText(NSAttributedString(string: maximumValue!, attributes: labelTextAttributes))
-        slider.fraction = 0.1
-        slider.shadowOffset = CGSize(width: 0, height: 10)
-        slider.shadowBlur = 5
-        slider.shadowColor = UIColor(white: 0, alpha: 0.1)
-        slider.valueViewColor = .white
-
-        slider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
+//        slider.attributedTextForFraction = { fraction in
+//            let formatter = NumberFormatter()
+//            formatter.maximumIntegerDigits = 3
+//            formatter.maximumFractionDigits = 1
+//            return NSAttributedString(string: self.initialValue!, attributes: [.font: UIFont.systemFont(ofSize: 18, weight: .bold), .foregroundColor: UIColor.black])
+//        }
+//        slider.setMinimumLabelAttributedText(NSAttributedString(string: minimumValue!, attributes: labelTextAttributes))
+//        slider.setMaximumLabelAttributedText(NSAttributedString(string: maximumValue!, attributes: labelTextAttributes))
+//        slider.fraction = 0.1
+//        slider.shadowOffset = CGSize(width: 0, height: 10)
+//        slider.shadowBlur = 5
+//        slider.shadowColor = UIColor(white: 0, alpha: 0.1)
+//        slider.valueViewColor = .white
+//
+//        slider.addTarget(self, action: #selector(sliderValueChanged), for: .valueChanged)
     }
     
-    @objc func sliderValueChanged(sender: Slider) {
-        let fraction = sender.fraction
-
-        var max: CGFloat = 0
-        var min: CGFloat = 0
-        if let maxFloat = Float(self.maximumValue!) {
-            max = CGFloat(maxFloat)
-        }
-        if let minFloat = Float(self.minimumValue!) {
-            min = CGFloat(minFloat)
-        }
-        let total = max - min
-        let currentScale = min + (total * fraction)
-        let displayValue = Float(currentScale)
-        self.glucoseLabel.text = String(format: self.formatString, displayValue)
-        self.slider.attributedTextForFraction  = { fraction in
-            let formatter = NumberFormatter()
-            formatter.maximumIntegerDigits = 3
-            formatter.maximumFractionDigits = 1
-            let string = String(format: self.formatString, displayValue)
-            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 18, weight: .bold), .foregroundColor: UIColor.black])
-        }
-    }
+//    @objc func sliderValueChanged(sender: Slider) {
+//        let fraction = sender.fraction
+//
+//        var max: CGFloat = 0
+//        var min: CGFloat = 0
+//        if let maxFloat = Float(self.maximumValue!) {
+//            max = CGFloat(maxFloat)
+//        }
+//        if let minFloat = Float(self.minimumValue!) {
+//            min = CGFloat(minFloat)
+//        }
+//        let total = max - min
+//        let currentScale = min + (total * fraction)
+//        let displayValue = Float(currentScale)
+//        self.glucoseLabel.text = String(format: self.formatString, displayValue)
+//        self.slider.attributedTextForFraction  = { fraction in
+//            let formatter = NumberFormatter()
+//            formatter.maximumIntegerDigits = 3
+//            formatter.maximumFractionDigits = 1
+//            let string = String(format: self.formatString, displayValue)
+//            return NSAttributedString(string: string, attributes: [.font: UIFont.systemFont(ofSize: 18, weight: .bold), .foregroundColor: UIColor.black])
+//        }
+//    }
     
     @IBAction func saveButtonAction(_ sender: UIButton) {
 
