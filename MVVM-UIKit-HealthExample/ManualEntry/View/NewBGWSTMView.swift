@@ -188,7 +188,7 @@ struct NewBGWSTMView: View {
     private var saveButton: some View {
         VStack {
             Button(action: {
-                mViewModel?.saveVitalReading(deviceType: readingType.description, closure: {
+                mViewModel?.saveVitalReading(readingType: readingType, closure: {
                     navigationController?.dismiss(animated: true)
                 })
             }, label: {
@@ -212,12 +212,6 @@ struct NewBGWSTMView: View {
         mViewModel?.setReadingValue(value: reading)
         return reading
     }
-
-//    func getPercentage<T>() -> T {
-//        let reading = T((offset) / (rectSize.width - circleSize) * maximumValue)
-//        mViewModel?.setReadingValue(value: reading)
-//        return reading
-//    }
 }
 
 struct ContentView_Previews: PreviewProvider {
